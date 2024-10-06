@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="/location" method="POST">
+    <input type="text" name="address" placeholder="Zip Code">
+    <input type="text" name="crime_date" placeholder="year-mon">
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="/location" method="POST">
+    <select name="crimes">
+        {% for crime in crimes %}
+            <option value="{{ crime }}" placeholder="Select crime" selected>{{ crime }} </option>
+    
+         {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
