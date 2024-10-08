@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 <form action="{{ url_for('crime_map', crime_selected=crime_selected) }}" method="POST">
