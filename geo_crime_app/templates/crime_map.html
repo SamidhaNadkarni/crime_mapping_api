@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% if not iframe %}
+<form action="{{ url_for('crime_map', crime_selected=crime_selected) }}" method="POST">
+    <select name="crime_selected">
+        {% for crime in crimes %}
+            <option value="{{ crime }}">{{ crime }} </option>
+    
+         {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+{% endif %}
+
+<br>
+
+{% if iframe %}
+<form action="{{ url_for('crime_map', crime_selected=crimes) }}" method="POST">
+    <h4>Crime: {{ crimes }}</h4>
+    <div id="map">
+        {{ iframe|safe }}
+    </div>
+</form>
+{% endif %}
+
+{% endblock %}

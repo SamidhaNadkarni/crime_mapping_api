@@ -1,9 +1,0 @@
-{% extends "layout.html" %}
-
-{% block content %}
-<form action="{{ url_for('login') }}" method="POST">
-    <input type="text" name="address" placeholder="Zip Code">
-    <input type="text" name="crime_date" placeholder="year-mon">
-    <button type="submit">Submit</button>
-</form>
-{% endblock %}
