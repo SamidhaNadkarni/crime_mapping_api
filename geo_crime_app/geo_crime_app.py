@@ -1,8 +1,8 @@
 from . import create_app
-from flask import render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 import geo_crime_app.get_data as h
 
-app = create_app('default')
+app = create_app("development")
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -24,4 +24,4 @@ def crime_map():
         return render_template('crime_map.html', crimes=crime_list)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
