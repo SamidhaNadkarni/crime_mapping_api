@@ -1,6 +1,6 @@
-
+#configuration setting for multiple environements
 class Config:
-    SECRET_KEY = 'secret-key'
+    pass
 
 class DevelopmentConfig(Config):
     DEBUG = True
